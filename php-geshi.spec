@@ -1,4 +1,5 @@
-Summary:	GeSHi - Generic Syntax Highlighter
+Summary:	GeSHi - Generic Syntax Highlighter for PHP
+Summary(pl.UTF-8):	GeSHi - ogólna biblioteka PHP do podświetlania składni
 Name:		geshi
 Version:	1.0.7.20
 Release:	1
@@ -18,6 +19,11 @@ GeSHi is a generic syntax highlighter, written in PHP. You simply
 input the source code you wish to highlight with the language you wish
 to use, and the output will be a file syntax highlighted to XHTML
 standards.
+
+%description -l pl.UTF-8
+GeSHi to ogólna biblioteka podświetlania składni dla PHP. Wystarczy
+zaimportować kod źródłowy do podświetlenia w dowolnie wybranym języku,
+a na wyjściu powstanie zgodny z XHTML plik z podświetloną składnią.
 
 %prep
 %setup -q -n %{name}
