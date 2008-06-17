@@ -8,11 +8,10 @@ Group:		Development/Languages/PHP
 Source0:	http://dl.sourceforge.net/geshi/GeSHi-%{version}.tar.bz2
 # Source0-md5:	22e57bf1936319ad07423fd32fa3a78a
 URL:		http://qbnz.com/highlighter/
-Requires:	php-dirs
+BuildRequires:	rpmbuild(macros) >= 1.461
+Requires:	php-common
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		_phpdir	/usr/share/php
 
 %description
 GeSHi is a generic syntax highlighter, written in PHP. You simply
@@ -30,8 +29,8 @@ a na wyjściu powstanie zgodny z XHTML plik z podświetloną składnią.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_phpdir}
-cp -a geshi.php geshi $RPM_BUILD_ROOT%{_phpdir}
+install -d $RPM_BUILD_ROOT%{php_data_dir}
+cp -a geshi.php geshi $RPM_BUILD_ROOT%{php_data_dir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -40,5 +39,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc docs/{BUGS,CHANGES,README,THANKS,TODO}
 %doc docs/geshi-doc.txt
-%{_phpdir}/geshi.php
-%{_phpdir}/geshi
+%{php_data_dir}/geshi.php
+%{php_data_dir}/geshi
