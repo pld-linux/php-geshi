@@ -2,12 +2,12 @@
 Summary:	GeSHi - Generic Syntax Highlighter for PHP
 Summary(pl.UTF-8):	GeSHi - ogólna biblioteka PHP do podświetlania składni
 Name:		php-geshi
-Version:	1.0.9.0
+Version:	1.0.9.1
 Release:	1
 License:	GPL v2
 Group:		Development/Languages/PHP
 Source0:	https://github.com/GeSHi/geshi-1.0/releases/download/v%{version}/GeSHi-%{version}.tar.bz2
-# Source0-md5:	81a2ed8b2e1c28b05ef2badc7583ed45
+# Source0-md5:	e5b88acbf792b9ec682f3691138e3ce7
 URL:		http://qbnz.com/highlighter/
 BuildRequires:	rpmbuild(macros) >= 1.461
 Requires:	php(core) >= %{php_min_version}
